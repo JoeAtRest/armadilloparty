@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.26403.7
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SampleMvcApp", "SampleMvcApp.csproj", "{FF9D1786-4670-454D-96D1-92C366FF760E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ArmadilloParty", "ArmadilloParty.csproj", "{FF9D1786-4670-454D-96D1-92C366FF760E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,5 +30,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C3BBF18-11FC-424A-84EC-90047EE17AC9}
 	EndGlobalSection
 EndGlobal

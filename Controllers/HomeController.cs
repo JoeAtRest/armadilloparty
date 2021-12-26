@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace SampleMvcApp.Controllers
+namespace ArmadilloParty.Controllers
 {
     public class HomeController : Controller
     {

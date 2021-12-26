@@ -3,12 +3,12 @@ using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using System.Threading.Tasks;
-using SampleMvcApp.ViewModels;
+using ArmadilloParty.ViewModels;
 using System.Linq;
 using System.Security.Claims;
 using Auth0.AspNetCore.Authentication;
 
-namespace SampleMvcApp.Controllers
+namespace ArmadilloParty.Controllers
 {
     public class AccountController : Controller
     {

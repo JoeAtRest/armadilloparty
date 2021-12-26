@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 
-namespace SampleMvcApp
+namespace ArmadilloParty
 {
     public class Program
     {

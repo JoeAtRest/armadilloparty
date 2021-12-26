@@ -6,16 +6,16 @@ EXPOSE 80, 443
 
 FROM mcr.microsoft.com/dotnet/sdk:5.0 AS build
 WORKDIR /src
-COPY ["SampleMvcApp.csproj", "."]
-RUN dotnet restore "./SampleMvcApp.csproj"
+COPY ["ArmadilloParty.csproj", "."]
+RUN dotnet restore "./ArmadilloParty.csproj"
 COPY . .
 WORKDIR "/src/."
-RUN dotnet build "SampleMvcApp.csproj" -c Release -o /app/build
+RUN dotnet build "ArmadilloParty.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "SampleMvcApp.csproj" -c Release -o /app/publish
+RUN dotnet publish "ArmadilloParty.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "SampleMvcApp.dll"]
+ENTRYPOINT ["dotnet", "ArmadilloParty.dll"]

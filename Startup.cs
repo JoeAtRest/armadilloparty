@@ -3,14 +3,14 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
-using SampleMvcApp.Support;
+using ArmadilloParty.Support;
 using Auth0.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
 
-namespace SampleMvcApp
+namespace ArmadilloParty
 {
     public class Startup
     {
@@ -66,6 +66,8 @@ namespace SampleMvcApp
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
+            
+            // for the moment don't force https
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();

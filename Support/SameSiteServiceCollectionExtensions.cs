@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace SampleMvcApp.Support
+namespace ArmadilloParty.Support
 {
     public static class SameSiteServiceCollectionExtensions
     {

@@ -2,7 +2,7 @@
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace SampleMvcApp.Support
+namespace ArmadilloParty.Support
 {
     public class HasScopeHandler : AuthorizationHandler<HasScopeRequirement>
     {

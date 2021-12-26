@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using System;
 
-namespace SampleMvcApp.Support
+namespace ArmadilloParty.Support
 // HasScopeRequirement.cs
 {
     public class HasScopeRequirement : IAuthorizationRequirement
