@@ -1,23 +1,24 @@
 ﻿@model ArmadilloParty.ViewModels.UserProfileViewModel
 @{
-    ViewData["Title"] = "User Profile";
+    ViewData["Title"] = "Success";
 }
 
-<div class="row">
-    <div class="col-md-12">
-        <div class="row">
-            <h2>@ViewData["Title"].</h2>
-
-            <div class="col-md-2">
-                <img src="@Model.ProfileImage"
-                     alt="" class="img-rounded img-responsive" />
-            </div>
-            <div class="col-md-4">
-                <h3>@Model.Name</h3>
-                <p>
-                    <i class="glyphicon glyphicon-envelope"></i> @Model.EmailAddress
-                </p>
-            </div>
+<header class="masthead bg-warning text-white text-center">
+    <div class="container d-flex align-items-center flex-column">
+        <!-- Masthead Avatar Image-->
+        <img class="masthead-avatar mb-5" src="~/assets/img/portfolio/success.png" alt="..." />
+        <!-- Masthead Heading-->
+        <h1 class="masthead-heading text-uppercase mb-0">WELL DONE !</h1>
+        <!-- Icon Divider-->
+        <div class="divider-custom divider-light">
+            <div class="divider-custom-line"></div>
+            <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+            <div class="divider-custom-line"></div>
         </div>
+        <!-- About Section Content-->
+        <div class="row">
+            <div class="col-lg-4 ms-auto"><p class="lead">Well done Chris ! You have solved the puzzle.</p></div>
+            <div class="col-lg-4 ms-auto"><p class="lead">Your reward is an enhanced appreciation of armadillos and the satisfaction of winning.</p></div>
+        </div>       
     </div>
-</div>
+</header>
