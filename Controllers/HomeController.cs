@@ -13,5 +13,10 @@ namespace ArmadilloParty.Controllers
         {
             return View();
         }
+
+        public IActionResult Credits()
+        {
+            return View();
+        }
     }
 }
