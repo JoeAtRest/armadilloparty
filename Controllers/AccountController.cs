@@ -7,6 +7,7 @@ using ArmadilloParty.ViewModels;
 using System.Linq;
 using System.Security.Claims;
 using Auth0.AspNetCore.Authentication;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
 
 namespace ArmadilloParty.Controllers
 {
@@ -14,7 +15,8 @@ namespace ArmadilloParty.Controllers
     {
         public async Task Login(string returnUrl = "/")
         {
-            var authenticationProperties = new LoginAuthenticationPropertiesBuilder()
+            
+            var authenticationProperties = new LoginAuthenticationPropertiesBuilder()                
                 .WithRedirectUri(returnUrl)
                 .Build();
 

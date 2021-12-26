@@ -9,6 +9,10 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
 using System.Security.Claims;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Authentication.OpenIdConnect;
+using System;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.HttpOverrides;
 
 namespace ArmadilloParty
 {
@@ -45,6 +49,7 @@ namespace ArmadilloParty
                     };
                 });
 
+
             services.AddAuthorization(options =>
             {
                 options.AddPolicy("puzzlesolver", policy => policy.Requirements.Add(new HasScopeRequirement("puzzlesolver", Configuration["Auth0:Audience"])));
@@ -66,8 +71,18 @@ namespace ArmadilloParty
                 app.UseExceptionHandler("/Home/Error");
                 app.UseHsts();
             }
-            
-            // for the moment don't force https
+
+            //forward headers from the LB
+            var forwardOpts = new ForwardedHeadersOptions
+            {
+                ForwardedHeaders = ForwardedHeaders.XForwardedProto | ForwardedHeaders.XForwardedFor
+            };
+            //TODO: Set this up to only accept the forwarded headers from the load balancer
+            forwardOpts.KnownNetworks.Clear();
+            forwardOpts.KnownProxies.Clear();
+            app.UseForwardedHeaders(forwardOpts);
+
+   
             app.UseHttpsRedirection();
             app.UseStaticFiles();
             app.UseCookiePolicy();
