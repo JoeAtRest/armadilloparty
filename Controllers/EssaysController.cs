@@ -17,9 +17,9 @@ namespace ArmadilloParty.Controllers
 
         public IActionResult Essays()
         {            
-            var n = random.Next(0, 4);
+            var n = random.Next(0, 5);
 
-            string[] availableEssays = { "kidnap", "tucosattack", "mytunnel","escape" };
+            string[] availableEssays = { "kidnap", "tucosattack", "mytunnel","escape","confusion" };
 
             return View(availableEssays[n]);
         }
